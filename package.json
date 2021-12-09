@@ -8,12 +8,11 @@
   "author": "alberto467 <alberto467@users.noreply.github.com>",
   "scripts": {
     "build": "tsc",
-    "prepublish": "yarn run build",
     "lint": "eslint {src,test}/** && prettier -c *.json --ignore-path .gitignore",
     "lint:fix": "eslint {src,test}/** --fix && prettier --write *.json  --ignore-path .gitignore",
     "test": "jest",
     "test:watch": "jest --watch",
-    "postinstall": "husky install"
+    "prepare": "husky install && yarn run build"
   },
   "license": "MIT",
   "devDependencies": {
